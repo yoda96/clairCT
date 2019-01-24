@@ -21,7 +21,7 @@ node(){
    // }
 
     stage("Docker Image Vulnerability Analysis"){
-        sh "clair-scanner_linux_amd64 --ip 172.17.0.1 -r report.json  benhall/elasticsearch:1.4.2"
+        sh "clair-scanner_linux_amd64 --ip 172.17.0.1 -r report.json ubuntu"
 
     }
 
