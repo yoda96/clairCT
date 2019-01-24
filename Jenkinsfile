@@ -6,10 +6,7 @@ node(){
         checkout scm
     }
 	
-    stage("Install ps"){
-	      apt-get install -y procps
-    }
-  
+ 
     
    // stage("Run clair-db"){
      //   sh "docker run -p 5433:5433 -d --name db5 arminc/clair-db:2017-10-17"
