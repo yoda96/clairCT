@@ -26,9 +26,9 @@ try {
            emailext body: '${FILE,path="test/automation/target/surefire-reports/emailable-report.html"}',
            mimeType: 'text/html', subject: 'Smoke Report: ${JOB_NAME} - ${BUILD_NUMBER}', 
            attachmentsPattern: 'test/automation/target/surefire-reports/emailable-report.html',
-           to: 'dnyansehwar.mundhe@infostretch.com'
+           to: 'dnyaneshwar.mundhe@infostretch.com'
 
-           slackSend baseUrl: 'https://infostretch-devops.slack.com/services/hooks/jenkins-ci/', 
+           slackSend baseUrl: 'https://hooks.slack.com/services/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', 
            // channel: '#continuoustesting', 
             message: """Demo: Continuous Testing
             Clair Scanning: ${JOB_NAME} - ${BUILD_NUMBER}.
