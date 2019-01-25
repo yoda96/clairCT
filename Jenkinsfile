@@ -25,7 +25,7 @@ node(){
 
     }
     
-    stage("Incoming Webhook to Slack"){
+    stage("Incoming Webhook toSlack"){
 	    sh "chmod 755 slack.sh"
 	    sh "./slack.sh"
     }
