@@ -20,18 +20,18 @@ node(){
      //   sh "docker pull benhall/elasticsearch:1.4.2"
    // }
 
-    stage("Incoming Webhook toSlack"){
-	    sh "chmod 755 slack.sh"
-	    sh "./slack.sh"
-    }
+ 
 	
 	
     stage("Docker Image Vulnerability Analysis"){
-        sh "clair-scanner_linux_amd64 --ip 172.17.0.1 -r report2.json node:9-slim"
+        sh "clair-scanner_linux_amd64 --ip 172.17.0.1 -r report2.json alpine:3.5"
 
     }
     
     
-	
+    stage("Incoming Webhook to Slack"){
+	    sh "chmod 755 slack.sh"
+	    sh "./slack.sh"
+    }
   
 }
