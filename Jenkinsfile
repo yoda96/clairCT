@@ -1,15 +1,15 @@
 def userInput = true
 def didTimeout = false
 try {
-    timeout(time: 15, unit: 'SECONDS') { // change to a convenient timeout for you
+    timeout(time: 15, unit: 'SECONDS') { 
         userInput = input(
         id: 'Proceed1', parameters: [
         [$class: 'BooleanParameterDefinition', defaultValue: true, description: '', name: 'Please confirm you agree with this']
         ])
     }
-} catch(err) { // timeout reached or input false
+} catch(err) { 
     def user = err.getCauses()[0].getUser()
-    if('SYSTEM' == user.toString()) { // SYSTEM means timeout.
+    if('SYSTEM' == user.toString()) { 
         didTimeout = true
     } else {
         userInput = false
