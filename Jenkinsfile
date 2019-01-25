@@ -1,5 +1,5 @@
 node(){
-    env.CLAIR_IP="127.0.0.1"
+    env.CLAIR_IP="172.17.0.1"
     
     cleanWs()
     stage("CheckOut"){
