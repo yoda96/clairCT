@@ -21,7 +21,7 @@ node(){
    // }
 
     stage("Docker Image Vulnerability Analysis"){
-        sh "clair-scanner_linux_amd64 --ip 172.17.0.1 -r report2.json hello-world"
+        sh "clair-scanner_linux_amd64 --ip 172.17.0.1 -r report2.json node:9-slim"
 
     }
     
