@@ -26,7 +26,7 @@ node(){
 	if (userInput == true){
 		
 	  cleanWs()
-    stage("CheckOut"){
+    stage ("CheckOut"){
         checkout scm
     }
     
