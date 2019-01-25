@@ -20,6 +20,8 @@ try {
           catch(exception) {
            error "Image has vulnerabilities"
           }
+	
+	
           finally {
            step([$class: 'Publisher', reportFilenamePattern: 'test/automation/**/**/testng-results.xml'])
            // emailext attachLog: true, to: 'anshul.patel@infostretch.com'
