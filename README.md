@@ -1,6 +1,7 @@
 # clairCT
 
 Please make appropriate changes to the slack.sh file in URL for the webhook
+
 Do start the environment by executing following commands on terminal:
 
 docker run -p 5432:5432 -d --name db arminc/clair-db:2017-10-17
