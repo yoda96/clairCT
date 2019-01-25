@@ -1,6 +1,7 @@
-def userInput = true
-def didTimeout = false
+
 try {
+	def userInput = true
+def didTimeout = false
     timeout(time: 15, unit: 'SECONDS') { 
         userInput = input(
         id: 'Proceed1', parameters: [
